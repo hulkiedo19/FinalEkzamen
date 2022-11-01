@@ -1,0 +1,96 @@
+﻿<Window x:Class="DemEkzVariant3.Pustovoy.Presentation.ProductWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DemEkzVariant3.Pustovoy.Presentation"
+        mc:Ignorable="d"
+        Title="ProductWindow" 
+        Height="480" 
+        Width="300">
+    <Grid>
+        <StackPanel
+            Orientation="Vertical"
+            Margin="10"
+            VerticalAlignment="Center">
+            <TextBlock 
+                Text="Название"/>
+            <TextBox 
+                x:Name="TB_Title"/>
+
+            <TextBlock 
+                Text="Тип продукта"/>
+            <ComboBox
+                IsEditable="True"
+                IsReadOnly="True"
+                SelectedValuePath="Content"
+                x:Name="CB_ProductType"/>
+
+            <TextBlock 
+                Text="Артикль"/>
+            <TextBox 
+                x:Name="TB_Article"/>
+
+            <TextBlock 
+                Text="Описание"/>
+            <TextBox 
+                x:Name="TB_Description"/>
+
+            <TextBlock 
+                Text="Картинка"/>
+            <TextBox 
+                x:Name="TB_Image"/>
+
+            <TextBlock 
+                Text="Кол-во персонала"/>
+            <TextBox 
+                x:Name="TB_PersonCount"/>
+
+            <TextBlock 
+                Text="Номер цеха"/>
+            <TextBox 
+                x:Name="TB_WorkshopNumber"/>
+
+            <TextBlock 
+                Text="Минимальная стоимость"/>
+            <TextBox 
+                x:Name="TB_MinCount"/>
+
+            <TextBlock 
+                Text="Материалы"/>
+            <ListBox
+                Height="60"
+                SelectionMode="Multiple"
+                x:Name="LB_Materials"/>
+
+            <Grid
+                Margin="0, 10, 0, 10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.3*"/>
+                    <ColumnDefinition Width="0.3*"/>
+                    <ColumnDefinition Width="0.3*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button 
+                    Margin="0, 0, 5, 0"
+                    Content="Добавить"
+                    Grid.Column="0"
+                    Click="Add_Click"/>
+                <Button 
+                    Margin="5, 0, 5, 0"
+                    Content="Сохранить"
+                    Grid.Column="1"
+                    Click="Save_Click"/>
+                <Button 
+                    Margin="5, 0, 0, 0"
+                    Content="Удалить"
+                    Grid.Column="2"
+                    Click="Delete_Click"/>
+            </Grid>
+
+            <Button 
+                Content="Выйти"
+                Click="Exit_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
